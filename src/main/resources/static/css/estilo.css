@@ -21,13 +21,11 @@ body {
 }
 
 .barra-menu ul {
-	
 	color: white;
 	text-decoration: none;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	
 }
 
 .barra-menu li {
@@ -46,8 +44,23 @@ body {
 }
 
 .menu {
+	width: 100%;
 	margin-top: 5.8rem;
 }
+
+.menu a{
+	text-decoration: none;	
+}
+
+.menu li {
+	padding-left: 3rem;	
+}
+
+.menu li:hover {
+	width: 100%;
+	background-color: #2FD1BC; 	
+}
+
 
 #logo-javou {
 	width: 10rem;
@@ -111,8 +124,6 @@ body {
 .bt_centro:hover {
 	background-color: #eee;
 }
-
-
 
 #bt_consultar {
 	border-left: 0.7rem solid #EF4E3B;	

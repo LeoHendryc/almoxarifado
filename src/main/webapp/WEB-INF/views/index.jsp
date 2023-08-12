@@ -20,10 +20,10 @@
 			
 			<div class="menu">
 				<ul>
-					<li>Consultar</li>
-					<li>Cadastrar</li>
-					<li>Entrada</li>
-					<li>Saída</li>
+					<a href="/"><li>Consultar</li></a>
+					<a href=""><li>Cadastrar</li></a>
+					<a href=""><li>Entrada</li></a>
+					<a href=""><li>Saída</li></a>
 				</ul>
 			</div>
 			<img  id="logo-javou" alt="JaVou" src="/imagens/Logo_JaVou.png">
