@@ -16,7 +16,7 @@ public class Produto {
 	
 	
 	
-//	Getters and Sentters
+//	Getters and Setters
 	public int getId() {
 		return id;
 	}

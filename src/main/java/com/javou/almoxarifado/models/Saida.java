@@ -19,7 +19,7 @@ public class Saida {
 	
 	
 	
-	
+//	Getters and Setters
 	public int getId() {
 		return id;
 	}
