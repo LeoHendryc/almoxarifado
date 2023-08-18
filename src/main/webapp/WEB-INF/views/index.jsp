@@ -20,7 +20,7 @@
 			
 			<div class="menu">
 				<ul>
-					<a href="/"><li>Consultar</li></a>
+					<a href="/produto/lista"><li>Consultar</li></a>
 					<a href=""><li>Cadastrar</li></a>
 					<a href="/entrada/lista"><li>Entrada</li></a>
 					<a href=""><li>Saída</li></a>
@@ -38,7 +38,7 @@
 			
 			<div class="conteudo_centro">
 				<div class="container_botoes">
-					<a class="bt_centro" id="bt_consultar" href="">CONSULTAR</a></br>
+					<a class="bt_centro" id="bt_consultar" href="/produto/lista">CONSULTAR</a></br>
 					<a class="bt_centro" id="bt_cadastrar" href="">CADASTRAR</a></br>
 					<a class="bt_centro" id="bt_entrada" href="/entrada/lista">ENTRADA</a></br>
 					<a class="bt_centro" id="bt_saida" href="">SAÍDA</a></br>

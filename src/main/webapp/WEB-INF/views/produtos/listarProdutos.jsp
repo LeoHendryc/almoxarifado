@@ -23,13 +23,12 @@
 					<th>ID</th>
 					<th>PRODUTO</th>
 					<th>TIPO ID</th>
-		
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 
-				<c:forEach var="entrada" items="${listagem_produtos}">
+				<c:forEach var="produto" items="${listagem_produtos}">
 					<tr>
 						<td>${produto.id}</td>
 						<td>${produto.nome}</td>

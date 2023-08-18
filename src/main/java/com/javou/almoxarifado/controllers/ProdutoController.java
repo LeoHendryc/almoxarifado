@@ -20,7 +20,7 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 	
-//	Lista os Produtos
+//	Lista Produtos
 	@GetMapping("/lista")
 	public ModelAndView listar() {
 		try {
@@ -31,6 +31,7 @@ public class ProdutoController {
 		}
 	}
 	
+//	Cadastrar produtos
 	@PostMapping("/novo")
 	public String incluir(Produto produto, Model model) {
 		try {
