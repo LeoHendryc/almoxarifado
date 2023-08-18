@@ -1,0 +1,146 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: tomato;
+}
+
+.main {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	background-color: #f8f8f8;
+	
+}
+
+.barra-menu {
+	display: flex;
+	align-items: center;
+	width: 19vw;
+	flex-direction: column;
+	background-color: #304651;
+}
+
+.barra-menu ul {
+	color: white;
+	text-decoration: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.barra-menu li {
+	width: 100%;
+	color: white;
+	text-decoration: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0.5rem;
+	font-size: 1.7rem;	
+}
+
+.barra-menu h4 { 
+	color: #E0E332;
+	margin-top: 2rem;
+}
+
+.menu {
+	width: 100%;
+	margin-top: 5.8rem;
+}
+
+.menu a{
+	text-decoration: none;	
+}
+
+.menu li {
+	padding-left: 3rem;	
+}
+
+.menu li:hover {
+	width: 100%;
+	background-color: #2FD1BC; 	
+}
+
+
+#logo-javou {
+	width: 10rem;
+	margin-top: 8rem;
+}
+
+.conteudo {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 81vw;
+	background-color: #f8f8f8;
+}
+
+
+#cabecalho_titulo {	
+	display: flex;
+	width: 100%;
+	height: 13vh;
+	align-items: center;
+	justify-content: center;
+	background-color: #cccccc;
+	
+}
+
+.conteudo_centro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 87vh;
+	
+	/* border: 2px solid red; */
+}
+
+.container_botoes {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 50rem;
+	height:30rem;
+	
+}
+
+.bt_centro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 20rem;
+	height: 13rem;
+	margin: 0.6rem;
+	background-color: white;
+	text-decoration: none;
+	font-size: 1.3rem;	
+	font-weight: 700;
+	color: black;
+	border: 1px solid #ccc;
+	border-radius: 0.6rem;
+}
+
+.bt_centro:hover {
+	background-color: #eee;
+}
+
+#bt_consultar {
+	border-left: 0.7rem solid #EF4E3B;	
+}
+
+#bt_cadastrar {
+	border-left: 0.7rem solid #569FD3;
+}
+
+#bt_entrada {
+	border-left: 0.7rem solid #5BBF85;
+}
+
+#bt_saida {
+	border-left: 0.7rem solid #FFB102;	
+}
+
+
+
+

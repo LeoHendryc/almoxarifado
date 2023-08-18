@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Entradas</title>
+<title>Produtos</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -13,7 +13,7 @@
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 	<div class="container">
-		<h2 class="text-primary text-center">LISTA DE ENTRADAS</h2>
+		<h2 class="text-primary text-center">LISTA DE PRODUTOS</h2>
 		<a href="" class="btn btn-primary">Nova Entrada</a>
 
 
@@ -21,28 +21,27 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>PRODUTO ID</th>
-					<th>QUANTIDADE</th>
-					<th>DATA</th>
+					<th>PRODUTO</th>
+					<th>TIPO ID</th>
+		
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 
-				<c:forEach var="entrada" items="${listagem_entradas}">
+				<c:forEach var="entrada" items="${listagem_produtos}">
 					<tr>
-						<td>${entrada.id}</td>
-						<td>${entrada.produtoId}</td>
-						<td>${entrada.quantidade}</td>
-						<td>${entrada.data}</td>
+						<td>${produto.id}</td>
+						<td>${produto.nome}</td>
+						<td>${produto.tipoId}</td>
+						
 
 					</tr>
 				</c:forEach>
 
 			</tbody>
 		</table>
-
-
 	</div>
+	
 </body>
 </html>
