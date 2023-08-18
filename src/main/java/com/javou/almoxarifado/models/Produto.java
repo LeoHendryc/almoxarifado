@@ -13,10 +13,10 @@ public class Produto {
 	
 	private int tipoId;
 	
+
 	
 	
-	
-//	Getters and Sentters
+//	Getters and Setters
 	public int getId() {
 		return id;
 	}
@@ -40,6 +40,9 @@ public class Produto {
 	public void setTipoId(int tipoId) {
 		this.tipoId = tipoId;
 	}
+
+
+	
 	
 	
 	
