@@ -14,7 +14,7 @@
 
 	<div class="container">
 		<h2 class="text-primary text-center">LISTA DE PRODUTOS</h2>
-		<a href="" class="btn btn-primary">Nova Entrada</a>
+		<a href="/produto/novo" class="btn btn-primary">Nova Entrada</a>
 
 
 		<table class="table table-striped">
@@ -23,13 +23,12 @@
 					<th>ID</th>
 					<th>PRODUTO</th>
 					<th>TIPO ID</th>
-		
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 
-				<c:forEach var="entrada" items="${listagem_produtos}">
+				<c:forEach var="produto" items="${listagem_produtos}">
 					<tr>
 						<td>${produto.id}</td>
 						<td>${produto.nome}</td>
