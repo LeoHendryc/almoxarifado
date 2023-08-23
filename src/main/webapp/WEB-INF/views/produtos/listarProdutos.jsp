@@ -14,7 +14,7 @@
 
 	<div class="container">
 		<h2 class="text-primary text-center">LISTA DE PRODUTOS</h2>
-		<a href="" class="btn btn-primary">Nova Entrada</a>
+		<a href="/produto/novo" class="btn btn-primary">Nova Entrada</a>
 
 
 		<table class="table table-striped">

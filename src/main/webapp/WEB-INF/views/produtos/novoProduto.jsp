@@ -13,6 +13,7 @@
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<h2 class="text-primary text-center">Cadastro de Produto</h2>
 	
+	<!----> 
 	<form action="/produto/novo" method="post"> 
 
 			<div class="mb-3">
@@ -26,7 +27,7 @@
 			</div>
 
 		</form>
-	
+	 
 
 </body>
 </html>

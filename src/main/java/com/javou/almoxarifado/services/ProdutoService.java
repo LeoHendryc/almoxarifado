@@ -1,12 +1,12 @@
 package com.javou.almoxarifado.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.repository.ProdutoRepository;
@@ -21,8 +21,9 @@ public class ProdutoService {
 		return produtoRepository.findAll();
 	}
 	
-//	@SuppressWarnings("unused")
-	public Produto incluir(Produto produto) {
+
+	@SuppressWarnings("unused")
+	public Produto incluir(Produto produto ) {
 		try {
 			Produto p = produtoRepository.getReferenceById(produto.getId());
 			return null;
@@ -30,5 +31,4 @@ public class ProdutoService {
 			return produtoRepository.save(produto);
 		}
 	}
-	
 }

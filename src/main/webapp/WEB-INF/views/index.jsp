@@ -21,6 +21,7 @@
 			<div class="menu">
 				<ul>
 					<a href="/produto/lista"><li>Consultar</li></a>
+					<a href="/produto/novo"><li>CadastroTeste</li></a>
 					<a href=""><li>Cadastrar</li></a>
 					<a href="/entrada/lista"><li>Entrada</li></a>
 					<a href=""><li>Saída</li></a>
