@@ -24,6 +24,7 @@
 					<th>PRODUTO</th>
 					<th>TIPO ID</th>
 					<th></th>
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -33,7 +34,13 @@
 						<td>${produto.id}</td>
 						<td>${produto.nome}</td>
 						<td>${produto.tipoId}</td>
-						
+
+						<td>
+							<a class="btn btn-warning btn-sm">Alterar</a>
+							<a class="btn btn-danger btn-sm">Excluir</a>
+							
+						</td>
+
 
 					</tr>
 				</c:forEach>
@@ -41,6 +48,6 @@
 			</tbody>
 		</table>
 	</div>
-	
+
 </body>
 </html>

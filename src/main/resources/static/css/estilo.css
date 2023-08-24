@@ -1,7 +1,7 @@
 @charset "ISO-8859-1";
 
 body {
-	background-color: tomato;
+	
 }
 
 .main {
@@ -73,6 +73,11 @@ body {
 	justify-content: flex-start;
 	width: 81vw;
 	background-color: #f8f8f8;
+}
+
+.conteudo-form {
+	margin: auto;
+	max-width: 500px;
 }
 
 

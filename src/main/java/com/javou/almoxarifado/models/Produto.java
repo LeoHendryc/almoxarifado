@@ -22,6 +22,11 @@ public class Produto {
 	@Column(name = "tipoId")
 	private int tipoId;
 	
+//	@Column(name = "tipo_id")
+//	private int tipo_id;
+//	
+	
+	
 
 	
 	
@@ -50,10 +55,18 @@ public class Produto {
 		this.tipoId = tipoId;
 	}
 
+//	public int getTipo_id() {
+//		return tipo_id;
+//	}
+//
+//	public void setTipo_id(int tipo_id) {
+//		this.tipo_id = tipo_id;
+//	}
+
 
 	
-	
-	
+
+		
 	
 
 }

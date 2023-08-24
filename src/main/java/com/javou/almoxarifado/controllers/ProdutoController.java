@@ -55,27 +55,5 @@ public class ProdutoController {
 	}
 	
 	
-//	@GetMapping("/novo")
-//	public ModelAndView incluir() {
-//		try {
-//			List<Produto> produtos = produtoRepository.findAll();
-//			return new ModelAndView("produtos/cadastrarProduto", "lista_produtos", produtos);
-//		} catch (Exception e) {
-//			return new ModelAndView("erro", "msg_erro", e.toString());
-//		}	
-//	}
-	
-//	public String incluir(@RequestParam("id") int id, Produto produto, Model model) {
-//		try {
-//			Produto produto1 = produtoRepository.getReferenceById(id);
-//			produto1.setNome("");
-//			System.out.println("id: "+id+ " produto: " + produto);
-//			return "redirect:/produto/novo";
-//		} catch (Exception e) {
-//			model.addAttribute("msg_erro", e.toString());
-//		}
-//		return null;
-//		
-//	}
 
 }
