@@ -2,9 +2,12 @@ package com.javou.almoxarifado.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,8 +22,9 @@ public class Produto {
 	@Column(name = "nome")
 	private String nome;
 	
-	@Column(name = "tipoId")
-	private int tipoId;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "unidadeId")
+	private Tipo tipo;
 	
 
 	
@@ -42,17 +46,13 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public int getTipoId() {
-		return tipoId;
+	public Tipo getTipo() {
+		return tipo;
 	}
 
-	public void setTipoId(int tipoId) {
-		this.tipoId = tipoId;
-	}
-
-
-	
-	
+	public void setTipo(Tipo tipo) {
+		this.tipo = tipo;
+	}	
 	
 	
 
