@@ -31,4 +31,13 @@ public class ProdutoService {
 			return produtoRepository.save(produto);
 		}
 	}
+	
+	public String remover(String id) {
+		try {
+			produtoRepository.deleteById(id);
+			return String.format("Cliente %s removido com sucesso", id);
+		} catch (Exception e) {
+			 return e.toString();
+		}
+	}
 }

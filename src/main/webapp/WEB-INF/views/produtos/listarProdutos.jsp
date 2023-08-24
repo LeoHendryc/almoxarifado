@@ -37,7 +37,7 @@
 
 						<td>
 							<a class="btn btn-warning btn-sm">Alterar</a>
-							<a class="btn btn-danger btn-sm">Excluir</a>
+							<a class="btn btn-danger btn-sm" href="/produto/remover/${produto.id}">Excluir</a>
 							
 						</td>
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -47,6 +48,27 @@ public class ProdutoController {
 		try {
 			produtoRepository.save(produto);
 			System.out.println(produto);
+			return "redirect:/produto/lista";
+		} catch (Exception e) {
+			model.addAttribute("msg_erro", e.toString());
+			return "erro";
+		}
+	}
+	
+	@GetMapping("/remover/{id}")
+	public ModelAndView remover(@PathVariable("id") String id) {
+		try {
+			Produto produto = produtoRepository.getReferenceById(id);
+			return new ModelAndView("produtos/removerProduto", "produto", produto);
+		} catch (Exception e) {
+			return new ModelAndView("erro","msg_erro", e.toString());
+		}
+	}
+	
+	@PostMapping("/remover")
+	public String remover(@RequestParam("id") String id, Model model) {
+		try {
+			produtoRepository.deleteById(id);
 			return "redirect:/produto/lista";
 		} catch (Exception e) {
 			model.addAttribute("msg_erro", e.toString());
