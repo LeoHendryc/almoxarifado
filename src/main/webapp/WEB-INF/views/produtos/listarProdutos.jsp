@@ -14,7 +14,7 @@
 
 	<div class="container">
 		<h2 class="text-primary text-center">LISTA DE PRODUTOS</h2>
-		<a href="/produto/novo" class="btn btn-primary">Nova Entrada</a>
+		<a href="/produtos/novo" class="btn btn-primary">Nova Entrada</a>
 
 
 		<table class="table table-striped">
@@ -33,14 +33,17 @@
 						<td>${produto.id}</td>
 						<td>${produto.nome}</td>
 						<td>${produto.tipoId}</td>
-						
 
+						<td>
+							<a class="btn btn-warning btn-sm">Editar</a>
+							<a class="btn btn-danger btn-sm" href="/produtos/remover/${produto.id}">Excluir</a>
+						</td>
 					</tr>
 				</c:forEach>
 
 			</tbody>
 		</table>
 	</div>
-	
+
 </body>
 </html>

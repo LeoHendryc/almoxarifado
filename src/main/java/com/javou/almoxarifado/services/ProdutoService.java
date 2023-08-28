@@ -23,12 +23,21 @@ public class ProdutoService {
 	
 
 	@SuppressWarnings("unused")
-	public Produto incluir(Produto produto ) {
+	public Produto incluir(Produto produto) {
 		try {
 			Produto p = produtoRepository.getReferenceById(produto.getId());
 			return null;
 		} catch (EntityNotFoundException e) {
 			return produtoRepository.save(produto);
+		}
+	}
+	
+	public String remover(String id) {
+		try {
+			produtoRepository.deleteById(id);
+			return String.format("Cliente %s removido com sucesso", id);
+		} catch (Exception e) {
+			 return e.toString();
 		}
 	}
 }

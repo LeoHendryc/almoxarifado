@@ -24,7 +24,7 @@ public class Produto {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "unidadeId")
-	private Tipo tipo;
+	private Tipo tipo;	
 	
 
 	
@@ -53,7 +53,7 @@ public class Produto {
 	public void setTipo(Tipo tipo) {
 		this.tipo = tipo;
 	}	
-	
+
 	
 
 }

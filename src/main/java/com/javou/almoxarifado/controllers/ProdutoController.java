@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +16,7 @@ import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.repository.ProdutoRepository;
 
 @Controller
-@RequestMapping("/produto")
+@RequestMapping("/produtos")
 public class ProdutoController {
 	
 	@Autowired
@@ -47,7 +48,28 @@ public class ProdutoController {
 		try {
 			produtoRepository.save(produto);
 			System.out.println(produto);
-			return "redirect:/produto/lista";
+			return "redirect:/produtos/lista";
+		} catch (Exception e) {
+			model.addAttribute("msg_erro", e.toString());
+			return "erro";
+		}
+	}
+	
+	@GetMapping("/remover/{id}")
+	public ModelAndView remover(@PathVariable("id") String id) {
+		try {
+			Produto produto = produtoRepository.getReferenceById(id);
+			return new ModelAndView("produtos/removerProduto", "produto", produto);
+		} catch (Exception e) {
+			return new ModelAndView("erro","msg_erro", e.toString());
+		}
+	}
+	
+	@PostMapping("/remover")
+	public String remover(@RequestParam("id") String id, Model model) {
+		try {
+			produtoRepository.deleteById(id);
+			return "redirect:/produtos/lista";
 		} catch (Exception e) {
 			model.addAttribute("msg_erro", e.toString());
 			return "erro";
@@ -55,27 +77,5 @@ public class ProdutoController {
 	}
 	
 	
-//	@GetMapping("/novo")
-//	public ModelAndView incluir() {
-//		try {
-//			List<Produto> produtos = produtoRepository.findAll();
-//			return new ModelAndView("produtos/cadastrarProduto", "lista_produtos", produtos);
-//		} catch (Exception e) {
-//			return new ModelAndView("erro", "msg_erro", e.toString());
-//		}	
-//	}
-	
-//	public String incluir(@RequestParam("id") int id, Produto produto, Model model) {
-//		try {
-//			Produto produto1 = produtoRepository.getReferenceById(id);
-//			produto1.setNome("");
-//			System.out.println("id: "+id+ " produto: " + produto);
-//			return "redirect:/produto/novo";
-//		} catch (Exception e) {
-//			model.addAttribute("msg_erro", e.toString());
-//		}
-//		return null;
-//		
-//	}
 
 }
