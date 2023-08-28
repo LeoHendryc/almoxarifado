@@ -23,7 +23,7 @@ public class ProdutoService {
 	
 
 	@SuppressWarnings("unused")
-	public Produto incluir(Produto produto ) {
+	public Produto incluir(Produto produto) {
 		try {
 			Produto p = produtoRepository.getReferenceById(produto.getId());
 			return null;

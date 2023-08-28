@@ -16,7 +16,7 @@ import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.repository.ProdutoRepository;
 
 @Controller
-@RequestMapping("/produto")
+@RequestMapping("/produtos")
 public class ProdutoController {
 	
 	@Autowired
@@ -48,7 +48,7 @@ public class ProdutoController {
 		try {
 			produtoRepository.save(produto);
 			System.out.println(produto);
-			return "redirect:/produto/lista";
+			return "redirect:/produtos/lista";
 		} catch (Exception e) {
 			model.addAttribute("msg_erro", e.toString());
 			return "erro";
@@ -69,7 +69,7 @@ public class ProdutoController {
 	public String remover(@RequestParam("id") String id, Model model) {
 		try {
 			produtoRepository.deleteById(id);
-			return "redirect:/produto/lista";
+			return "redirect:/produtos/lista";
 		} catch (Exception e) {
 			model.addAttribute("msg_erro", e.toString());
 			return "erro";

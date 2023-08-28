@@ -15,7 +15,7 @@
 	<h2 class="text-primary text-center mt-3">Cadastro de Produto</h2>
 	
 	
-	<form action="/produto/novo" method="post"> 
+	<form action="/produtos/novo" method="post"> 
 
 			<div class="conteudo-form">
 				<label class="form-label">Nome:</label>
@@ -31,7 +31,7 @@
 			
 			<div class="text-center mt-3">
 				<button type="submit" class="btn btn-primary">Incluir</button>
-				<a href="/produto/lista" class="btn btn-secondary">Voltar para a lista</a>	
+				<a href="/produtos/lista" class="btn btn-secondary">Voltar para a lista</a>	
 			</div>
 
 		</form>

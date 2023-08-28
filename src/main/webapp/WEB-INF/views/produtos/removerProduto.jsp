@@ -23,8 +23,8 @@
 			<div class="mb-3">
 				<input type="hidden" name="id" value="${produto.id} }" />
 				<div>
-					<a href="/produto/lista">Não, retornar para produtos</a>
-					<button href="/produto/remover" type="submit" class="btn btn-danger">Sim, Remover</button>
+					<a class="btn btn-warning" href="/produtos/lista">Não, retornar para produtos</a>
+					<button type="submit" class="btn btn-danger">Sim, Remover</button>
 				</div>
 			</div>
 		</form>
