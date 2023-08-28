@@ -29,7 +29,7 @@ public class Entrada {
 	private int quantidade;
 	
 	@Column(name = "dataEntrada")
-	private Date data;
+	private Date dataEntrada;
 	
 
 	//	Getters and Setters
@@ -57,12 +57,12 @@ public class Entrada {
 		this.quantidade = quantidade;
 	}
 
-	public Date getData() {
-		return data;
+	public Date getDataEntrada() {
+		return dataEntrada;
 	}
 
-	public void setData(Date data) {
-		this.data = data;
+	public void setDataEntrada(Date data) {
+		this.dataEntrada = data;
 	}
 	
 	

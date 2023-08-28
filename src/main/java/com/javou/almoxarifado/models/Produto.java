@@ -24,7 +24,7 @@ public class Produto {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "unidadeId")
-	private Tipo tipo;	
+	private Unidade unidade;	
 	
 
 	
@@ -46,12 +46,12 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public Tipo getTipo() {
-		return tipo;
+	public Unidade getTipo() {
+		return unidade;
 	}
 
-	public void setTipo(Tipo tipo) {
-		this.tipo = tipo;
+	public void setTipo(Unidade unidade) {
+		this.unidade = unidade;
 	}	
 
 	
