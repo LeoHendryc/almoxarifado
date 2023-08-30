@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "produto")
 public class Produto {
@@ -22,6 +24,7 @@ public class Produto {
 	@Column(name = "nome")
 	private String nome;
 	
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "unidadeId")
 	private Unidade unidade;

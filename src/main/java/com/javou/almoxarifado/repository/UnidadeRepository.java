@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.javou.almoxarifado.models.Unidade;
 
-public interface TipoRepository extends JpaRepository<Unidade, Integer>{
+public interface UnidadeRepository extends JpaRepository<Unidade, Integer>{
 
 }
