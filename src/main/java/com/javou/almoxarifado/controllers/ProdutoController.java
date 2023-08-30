@@ -2,6 +2,7 @@ package com.javou.almoxarifado.controllers;
 
 import java.util.List;
 
+import org.springframework.beans.AbstractNestablePropertyAccessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -55,6 +56,30 @@ public class ProdutoController {
 		}
 	}
 	
+//	ALTERAR PRODUTO
+//	@GetMapping("/alterar/{id}")
+//	public ModelAndView alterar(@PathVariable("id") String id) {
+//		try {
+//			Produto produto = produtoRepository.getReferenceById(id);
+//			return new ModelAndView("produtos/alterarProduto", "produto", produto);
+//		} catch (Exception e) {
+//			return new ModelAndView("erro", "msg_erro", e.toString());
+//		}
+//	}
+	
+//	@GetMapping("/alterar")
+//	public String alterar(Produto produto, Model model) {
+//		try {
+//			produtoRepository.save(produto);
+//			return "redirect:/produtos/lista";
+//		} catch (Exception e) {
+//			model.addAttribute("msg_erro", e.toString());
+//			return "erro";
+//		}
+//	}
+	
+	
+//	REMOVER PRODUTO
 	@GetMapping("/remover/{id}")
 	public ModelAndView remover(@PathVariable("id") String id) {
 		try {

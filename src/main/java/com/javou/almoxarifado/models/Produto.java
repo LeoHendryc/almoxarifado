@@ -24,12 +24,13 @@ public class Produto {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "unidadeId")
-	private Unidade unidade;	
-	
-
+	private Unidade unidade;
 	
 	
-//	Getters and Setters
+	
+	
+	
+// Getters e Setters
 	public String getId() {
 		return id;
 	}
@@ -46,13 +47,21 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public Unidade getTipo() {
+	public Unidade getUnidade() {
 		return unidade;
 	}
 
-	public void setTipo(Unidade unidade) {
+	public void setUnidade(Unidade unidade) {
 		this.unidade = unidade;
 	}	
+	
+
+	
+	
+//	Getters and Setters
+	
+	
+	
 
 	
 

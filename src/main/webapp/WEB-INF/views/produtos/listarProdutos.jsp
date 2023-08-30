@@ -22,7 +22,7 @@
 				<tr>
 					<th>ID</th>
 					<th>PRODUTO</th>
-					<th>TIPO ID</th>
+					<th>UNIDADE</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -32,10 +32,10 @@
 					<tr>
 						<td>${produto.id}</td>
 						<td>${produto.nome}</td>
-						<td>${produto.tipoId}</td>
-
+						<td>${produto.unidade.sigla.toUpperCase()}</td>
+						
 						<td>
-							<a class="btn btn-warning btn-sm">Editar</a>
+							<a class="btn btn-warning btn-sm" href="/produtos/alterar">Editar</a>
 							<a class="btn btn-danger btn-sm" href="/produtos/remover/${produto.id}">Excluir</a>
 						</td>
 					</tr>
