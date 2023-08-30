@@ -32,6 +32,14 @@ public class ProdutoService {
 		}
 	}
 	
+// ALTERAR
+//	public Produto alterar(Produto produto, String id) {
+//		produto.setId(id);
+//		return produtoRepository.save(produto);
+//	}
+	
+	
+	
 	public String remover(String id) {
 		try {
 			produtoRepository.deleteById(id);
