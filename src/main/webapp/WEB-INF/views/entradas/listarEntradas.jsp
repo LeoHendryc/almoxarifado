@@ -14,7 +14,7 @@
 
 	<div class="container">
 		<h2 class="text-primary text-center">LISTA DE ENTRADAS</h2>
-		<a href="" class="btn btn-primary">Nova Entrada</a>
+		<a href="novo" class="btn btn-primary">Nova Entrada</a>
 
 
 		<table class="table table-striped">

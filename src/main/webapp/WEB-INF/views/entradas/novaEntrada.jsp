@@ -10,7 +10,10 @@
 	rel="stylesheet">
 </head>
 <body>
-	<h2 class="text-primary text-center">Cadastro de Clientes</h2>
+	<h2 class="text-primary text-center">Cadastro de Entrada</h2>
+	
+	<h1 class="text-center">AQUI VAI O FORM DE NOVA ENTRADA</h1>
+	
 	<form action="/entrada/novo" method="post">
 </body>
 </html>

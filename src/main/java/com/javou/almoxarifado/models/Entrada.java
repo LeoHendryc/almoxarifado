@@ -20,19 +20,21 @@ public class Entrada {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column (name = "id")
 	private int id;
+
+	@Column(name = "dataEntrada")
+	private Date dataEntrada;
 	
+	@Column(name = "quantidade")
+	private int quantidade;
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "produtoId")
 	private Produto produto;
 	
-	@Column(name = "quantidade")
-	private int quantidade;
 	
-	@Column(name = "dataEntrada")
-	private Date dataEntrada;
 	
+	// Getters and Setters
 
-	//	Getters and Setters
 	public int getId() {
 		return id;
 	}
@@ -40,13 +42,13 @@ public class Entrada {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	public Produto getProduto() {
-		return produto;
+
+	public Date getDataEntrada() {
+		return dataEntrada;
 	}
 
-	public void setProduto(Produto produto) {
-		this.produto = produto;
+	public void setDataEntrada(Date dataEntrada) {
+		this.dataEntrada = dataEntrada;
 	}
 
 	public int getQuantidade() {
@@ -57,13 +59,20 @@ public class Entrada {
 		this.quantidade = quantidade;
 	}
 
-	public Date getDataEntrada() {
-		return dataEntrada;
+	public Produto getProduto() {
+		return produto;
 	}
 
-	public void setDataEntrada(Date data) {
-		this.dataEntrada = data;
+	public void setProduto(Produto produto) {
+		this.produto = produto;
 	}
+	
+	
+	
+
+
+
+	
 	
 	
 

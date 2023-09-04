@@ -17,5 +17,18 @@ public class EntradaService {
 	public List<Entrada> listarEntradas() {
 		return entradaRepository.findAll();
 	}
+	
+	
+// INCLUIR ENTRADA
+	@SuppressWarnings("unused")
+	public Entrada incluir(Entrada entrada) {
+		try {
+			Entrada e = entradaRepository.getReferenceById(entrada.getId());
+			return null;
+		} catch (Exception e) {
+			return entradaRepository.save(entrada);
+		}
+	}
+	
 
 }
