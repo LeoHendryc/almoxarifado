@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.javou.almoxarifado.models.Unidade;
 import com.javou.almoxarifado.services.UnidadeService;
@@ -26,6 +27,7 @@ public class ApiUnidadeController {
 		this.unidadeService = unidadeService;
 	}
 	
+	@CrossOrigin
 	@GetMapping("/")
 	public List<Unidade> listarUnidades() {
 		return unidadeService.listarUnidades();
