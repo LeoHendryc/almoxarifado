@@ -49,7 +49,7 @@ public class ApiProdutoController {
 	@GetMapping("/dto")
 	public List<ProdutoUnidadeDTO> listarProdutosDTO() {
 		try {
-			return produtoService.listarProdutoUnidadeDTO();
+			return produtoService.listarProdutosDTO();
 			
 		} catch (Exception e) {
 			throw new RuntimeException(e);

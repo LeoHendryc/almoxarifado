@@ -2,7 +2,6 @@ package com.javou.almoxarifado.services;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.javou.almoxarifado.dto.ProdutoUnidadeDTO;
 import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.repository.ProdutoRepository;
-import com.javou.almoxarifado.repository.UnidadeRepository;
 
 @Service
 public class ProdutoService {
@@ -20,26 +18,24 @@ public class ProdutoService {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 	
-	@Autowired
-	private UnidadeRepository unidadeRepository;
 	
 	public List<Produto> listarProdutos() {
 		return produtoRepository.findAll();
 	}
 	
 	
-		
+	
+	
 
-
-	@SuppressWarnings("unused")
-	public Produto incluir(Produto produto) {
-		try {
-			Produto p = produtoRepository.getReferenceById(produto.getId());
-			return null;
-		} catch (EntityNotFoundException e) {
-			return produtoRepository.save(produto);
-		}
-	}
+//	@SuppressWarnings("unused")
+//	public Produto incluir(Produto produto) {
+//		try {
+//			Produto p = produtoRepository.getReferenceById(produto.getId());
+//			return null;
+//		} catch (EntityNotFoundException e) {
+//			return produtoRepository.save(produto);
+//		}
+//	}
 	
 // ALTERAR
 //	public Produto alterar(Produto produto, String id) {
@@ -48,7 +44,7 @@ public class ProdutoService {
 //	}
 	
 	
-	
+//	REMOVER
 	public String remover(String id) {
 		try {
 			produtoRepository.deleteById(id);
@@ -61,14 +57,21 @@ public class ProdutoService {
 	
 	
 //	DTO
-	public List<ProdutoUnidadeDTO> listarProdutoUnidadeDTO() {
-		List<ProdutoUnidadeDTO> produtos = new ArrayList<ProdutoUnidadeDTO>();
-		
-		produtoRepository.findAll().forEach(p -> produtos.add(
-				new ProdutoUnidadeDTO(p.getId(), p.getNome(), p.getNome())));
-		
-		return produtos;
+	public List<ProdutoUnidadeDTO> listarProdutosDTO() {
+		return produtoRepository.getProdutoUnidadeDTO();
 	}
+	
+	
+	
+//	Esse metodo seria se utilizasse MAP ao inves de DTO?
+//	public List<ProdutoUnidadeDTO> listarProdutoUnidadeDTO() {
+//		List<ProdutoUnidadeDTO> produtosDTO = new ArrayList<ProdutoUnidadeDTO>();
+//		
+//		produtoRepository.findAll().forEach(p -> produtosDTO.add(
+//				new ProdutoUnidadeDTO(p.getId(), p.getNome(), p.getNome())));
+//		
+//		return produtosDTO;
+//	}
 	
 	
 	

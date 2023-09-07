@@ -1,7 +1,5 @@
 package com.javou.almoxarifado.dto;
 
-import com.javou.almoxarifado.models.Unidade;
-
 public class ProdutoUnidadeDTO {
 	
 	private String idProduto;
@@ -9,6 +7,7 @@ public class ProdutoUnidadeDTO {
 	private String siglaUnidade;
 	
 	
+//	CONSTRUTORES
 	public ProdutoUnidadeDTO() {
 	}
 
@@ -16,20 +15,10 @@ public class ProdutoUnidadeDTO {
 		this.setIdProduto(idProduto);
 		this.setNome(nome);
 		this.setSiglaUnidade(siglaUnidade);
-//		this.idProduto = idProduto;
-//		this.nome = nome;
-//		this.siglaUnidade = siglaUnidade;
 	}
 
 
-
-
-//	public ProdutoUnidadeDTO(String id, String nome2, Unidade unidade) {
-//		this.setIdProduto(id);
-//		this.setNome(nome2);
-//		this.setSiglaUnidade(getSiglaUnidade());
-//	}
-
+	//GETTERS and SETTERS
 	public String getIdProduto() {
 		return idProduto;
 	}

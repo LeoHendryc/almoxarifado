@@ -26,6 +26,7 @@ public class Produto {
 	@Column(name = "nome")
 	private String nome;
 	
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "unidadeId")
 	private Unidade unidade;
