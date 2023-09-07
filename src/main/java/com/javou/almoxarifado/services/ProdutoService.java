@@ -1,5 +1,6 @@
 package com.javou.almoxarifado.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -8,8 +9,10 @@ import javax.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.javou.almoxarifado.dto.ProdutoUnidadeDTO;
 import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.repository.ProdutoRepository;
+import com.javou.almoxarifado.repository.UnidadeRepository;
 
 @Service
 public class ProdutoService {
@@ -17,10 +20,16 @@ public class ProdutoService {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 	
+	@Autowired
+	private UnidadeRepository unidadeRepository;
+	
 	public List<Produto> listarProdutos() {
 		return produtoRepository.findAll();
 	}
 	
+	
+		
+
 
 	@SuppressWarnings("unused")
 	public Produto incluir(Produto produto) {
@@ -48,4 +57,21 @@ public class ProdutoService {
 			 return e.toString();
 		}
 	}
+	
+	
+	
+//	DTO
+	public List<ProdutoUnidadeDTO> listarProdutoUnidadeDTO() {
+		List<ProdutoUnidadeDTO> produtos = new ArrayList<ProdutoUnidadeDTO>();
+		
+		produtoRepository.findAll().forEach(p -> produtos.add(
+				new ProdutoUnidadeDTO(p.getId(), p.getNome(), p.getNome())));
+		
+		return produtos;
+	}
+	
+	
+	
+	
+	
 }

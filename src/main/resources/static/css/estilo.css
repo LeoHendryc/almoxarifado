@@ -126,10 +126,13 @@ body {
 	color: black;
 	border: 1px solid #ccc;
 	border-radius: 0.6rem;
+	transition: 0.2s;
 }
+
 
 .bt_centro:hover {
 	background-color: #eee;
+	transform: scale(1.1);
 }
 
 #bt_consultar {

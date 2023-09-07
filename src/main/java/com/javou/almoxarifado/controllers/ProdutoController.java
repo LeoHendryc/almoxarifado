@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.javou.almoxarifado.dto.ProdutoUnidadeDTO;
 import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.repository.ProdutoRepository;
 
@@ -98,6 +99,18 @@ public class ProdutoController {
 		} catch (Exception e) {
 			model.addAttribute("msg_erro", e.toString());
 			return "erro";
+		}
+	}
+	
+//	DTO
+	
+	@GetMapping("/todos")
+	public ModelAndView listarTodosProdutos() {
+		try {
+			List<ProdutoUnidadeDTO> todosProdutos = produtoRepository.getProdutoUnidadeDTO();
+			return new ModelAndView("produtos/listaTodosProdutos", "todos_produtos", todosProdutos);
+		} catch (Exception e) {
+			return new ModelAndView("erro", "msg_erro", e.toString());
 		}
 	}
 	

@@ -57,12 +57,9 @@ public class Produto {
 
 	public void setUnidade(Unidade unidade) {
 		this.unidade = unidade;
-	}	
-	
+	}
 
 	
-	
-//	Getters and Setters
 	
 	
 	

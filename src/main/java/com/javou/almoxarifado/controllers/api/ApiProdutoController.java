@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.javou.almoxarifado.dto.ProdutoUnidadeDTO;
 import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.services.ProdutoService;
 
@@ -43,4 +44,19 @@ public class ApiProdutoController {
 		}
 		
 	}
+	
+	
+	@GetMapping("/dto")
+	public List<ProdutoUnidadeDTO> listarProdutosDTO() {
+		try {
+			return produtoService.listarProdutoUnidadeDTO();
+			
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	
+	
 }

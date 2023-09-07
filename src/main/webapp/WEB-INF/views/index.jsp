@@ -38,7 +38,7 @@
 			
 			<div class="conteudo_centro">
 				<div class="container_botoes">
-					<a class="bt_centro" id="bt_consultar" href="/produtos/lista">CONSULTAR</a></br>
+					<a class="bt_centro" id="bt_consultar" href="/produtos/todos">CONSULTAR</a></br>
 					<a class="bt_centro" id="bt_cadastrar" href="/produto/novo">CADASTRAR</a></br>
 					<a class="bt_centro" id="bt_entrada" href="/entrada/lista">ENTRADA</a></br>
 					<a class="bt_centro" id="bt_saida" href="">SAÍDA</a></br>

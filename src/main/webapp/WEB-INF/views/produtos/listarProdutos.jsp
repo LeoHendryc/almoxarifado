@@ -8,6 +8,7 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
 	rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/estilo.css">
 </head>
 <body>
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -43,6 +44,11 @@
 
 			</tbody>
 		</table>
+	</div>
+	
+	<div class="text-center">
+		<a href="/" class="btn btn-warning">Voltar</a>
+		<a href="/api/produtos/" target="_blank" class="btn btn-info">API Produtos</a>
 	</div>
 
 </body>
