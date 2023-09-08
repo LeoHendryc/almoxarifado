@@ -47,7 +47,7 @@
 	
 	<div class="text-center">
 		<a href="/" class="btn btn-warning">Voltar</a>
-		<a href="/api/produtos/dto" target="_blank" class="btn btn-info">API Produtos</a>
+		<a href="/api/produtos/" target="_blank" class="btn btn-info">API Produtos</a>
 	</div>
 	
 </body>

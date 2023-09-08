@@ -20,7 +20,7 @@
 			
 			<div class="menu">
 				<ul>
-					<a href="/produtos/lista"><li>Consultar</li></a>
+					<a href="/produtos/todos"><li>Consultar</li></a>
 					<a href="/produto/novo"><li>Cadastrar</li></a>
 					<a href="/entrada/lista"><li>Entrada</li></a>
 					<a href=""><li>Saída</li></a>

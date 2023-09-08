@@ -2,8 +2,9 @@ package com.javou.almoxarifado.dto;
 
 public class ProdutoUnidadeDTO {
 	
-	private String idProduto;
+	private int idProduto;
 	private String nome;
+	private int unidadeId;
 	private String siglaUnidade;
 	
 	
@@ -11,19 +12,20 @@ public class ProdutoUnidadeDTO {
 	public ProdutoUnidadeDTO() {
 	}
 
-	public ProdutoUnidadeDTO(String idProduto, String nome, String siglaUnidade) {
+	public ProdutoUnidadeDTO(int idProduto, String nome, int unidadeId, String siglaUnidade) {
 		this.setIdProduto(idProduto);
 		this.setNome(nome);
+		this.setUnidadeId(unidadeId);
 		this.setSiglaUnidade(siglaUnidade);
 	}
 
 
-	//GETTERS and SETTERS
-	public String getIdProduto() {
+//	GETTERS and SETTERS
+	public int getIdProduto() {
 		return idProduto;
 	}
 
-	public void setIdProduto(String idProduto) {
+	public void setIdProduto(int idProduto) {
 		this.idProduto = idProduto;
 	}
 
@@ -43,6 +45,14 @@ public class ProdutoUnidadeDTO {
 
 	public void setSiglaUnidade(String siglaUnidade) {
 		this.siglaUnidade = siglaUnidade;
+	}
+	
+	public int getUnidadeId() {
+		return unidadeId;
+	}
+
+	public void setUnidadeId(int unidadeId) {
+		this.unidadeId = unidadeId;
 	}
 
 	

@@ -50,7 +50,9 @@ public class ProdutoController {
 		try {
 			produtoRepository.save(produto);
 			System.out.println(produto);
+			
 			return "redirect:/produtos/lista";
+			
 		} catch (Exception e) {
 			model.addAttribute("msg_erro", e.toString());
 			return "erro";
@@ -82,7 +84,7 @@ public class ProdutoController {
 	
 //	REMOVER PRODUTO
 	@GetMapping("/remover/{id}")
-	public ModelAndView remover(@PathVariable("id") String id) {
+	public ModelAndView remover(@PathVariable("id") int id) {
 		try {
 			Produto produto = produtoRepository.getReferenceById(id);
 			return new ModelAndView("produtos/removerProduto", "produto", produto);
@@ -92,7 +94,7 @@ public class ProdutoController {
 	}
 	
 	@PostMapping("/remover")
-	public String remover(@RequestParam("id") String id, Model model) {
+	public String remover(@RequestParam("id") int id, Model model) {
 		try {
 			produtoRepository.deleteById(id);
 			return "redirect:/produtos/lista";
