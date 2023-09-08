@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name = "entrada")
 public class Entrada {
@@ -20,50 +22,62 @@ public class Entrada {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column (name = "id")
 	private int id;
+
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Column(name = "dataEntrada")
+	private Date dataEntrada;
+	
+	@Column(name = "quantidade")
+	private int quantidade;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "produtoId")
 	private Produto produto;
 	
-	@Column(name = "quantidade")
-	private int quantidade;
-	
-	@Column(name = "dataEntrada")
-	private Date dataEntrada;
-	
 
-	//	Getters and Setters
+
+	
+		
+	// Getters and Setters
+
 	public int getId() {
 		return id;
 	}
-
+	
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public Date getDataEntrada() {
+		return dataEntrada;
+	}
+	
+	public void setDataEntrada(Date dataEntrada) {
+		this.dataEntrada = dataEntrada;
 	}
 	
 	public Produto getProduto() {
 		return produto;
 	}
-
+	
 	public void setProduto(Produto produto) {
 		this.produto = produto;
 	}
-
+	
 	public int getQuantidade() {
 		return quantidade;
 	}
-
+	
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
 
-	public Date getDataEntrada() {
-		return dataEntrada;
-	}
+	
+	
 
-	public void setDataEntrada(Date data) {
-		this.dataEntrada = data;
-	}
+
+
+	
 	
 	
 

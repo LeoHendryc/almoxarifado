@@ -16,8 +16,8 @@
 	
 	
 	<form action="/produtos/novo" method="post"> 
-
 			<div class="conteudo-form">
+
 				<label class="form-label">Nome Produto:</label>
 				<input type="text" name="nome" class="form-control" maxlength="30" />
 				

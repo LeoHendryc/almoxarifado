@@ -13,36 +13,45 @@
 	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 	<div class="container">
-		<h2 class="text-primary text-center">LISTA DE ENTRADAS</h2>
-		<a href="" class="btn btn-primary">Nova Entrada</a>
+		<h2 class="text-primary text-center mt-3">LISTA DE ENTRADAS</h2>
+		<a href="novo" class="btn btn-primary">Nova Entrada</a>
 
 
 		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>ID</th>
+					<th>DATA</th>
 					<th>PRODUTO ID</th>
 					<th>QUANTIDADE</th>
-					<th>DATA</th>
 					<th></th>
 				</tr>
 			</thead>
 			<tbody>
 
+
 				<c:forEach var="entrada" items="${listagem_entradas}">
 					<tr>
 						<td>${entrada.id}</td>
-						<td>${entrada.produtoId}</td>
+						<td>${entrada.dataEntrada}</td>
+						<td>${entrada.produto}</td>
 						<td>${entrada.quantidade}</td>
-						<td>${entrada.data}</td>
+						
 
 					</tr>
 				</c:forEach>
-
 			</tbody>
+
 		</table>
-
-
+		
+		<div class="text-center">
+			<a href="/" class="btn btn-warning">Voltar</a>
+			<a href="/api/entradas/" target="_blank" class="btn btn-info">API Entrada</a>
+		</div>
+		
 	</div>
+	
+	
+	
 </body>
 </html>
