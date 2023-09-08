@@ -20,7 +20,7 @@ public class EntradaController {
 	@Autowired
 	private EntradaRepository entradaRepository;
 	
-//	Lista as entradas
+//	LISTAR ENTRADAS
 	@GetMapping("/lista")
 	public ModelAndView listar() {
 		try {
@@ -30,6 +30,16 @@ public class EntradaController {
 			return new ModelAndView("erro", "msg_erro", e.toString());
 		}
 		
+	}
+
+//	CADASTRAR ENTRADAS
+	@GetMapping("/novo")
+	public ModelAndView incluir() {
+		try {
+			return new ModelAndView("entradas/novaEntrada");
+		} catch (Exception e) {
+			return new ModelAndView("erro", "msg_erro", e.toString());
+		}
 	}
 	
 	@PostMapping("/novo")
