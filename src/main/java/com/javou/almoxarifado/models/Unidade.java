@@ -29,7 +29,7 @@ public class Unidade {
 	@Column(name = "sigla")
 	private String sigla;
 	
-	//@JsonIgnore
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "unidade")
 	private List<Produto> produtos;
 

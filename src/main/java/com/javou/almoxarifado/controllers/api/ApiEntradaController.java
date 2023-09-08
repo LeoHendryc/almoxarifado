@@ -1,5 +1,6 @@
 package com.javou.almoxarifado.controllers.api;
 
+import java.text.ParseException;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.javou.almoxarifado.dto.EntradaDTO;
+import com.javou.almoxarifado.dto.EntradaProdutoDTO;
+import com.javou.almoxarifado.dto.ProdutoUnidadeDTO;
 import com.javou.almoxarifado.models.Entrada;
 import com.javou.almoxarifado.services.EntradaService;
 
@@ -35,11 +39,31 @@ public class ApiEntradaController {
 	@PostMapping("/")
 	public ResponseEntity<Object> incluirEntrada(@RequestBody Entrada entrada) {
 		try {
-			return new ResponseEntity<Object>(entradaService.incluir(entrada), HttpStatus.CREATED);
+			return new ResponseEntity<Object>(entradaService.incluirEntrada(entrada), HttpStatus.CREATED);
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.toString());
 		}
 	}
 	
+	// LISTAR ENTRADAS DTO API
+	@CrossOrigin
+	@GetMapping("/dto")
+	public List<EntradaProdutoDTO> listarEntradasDTO() {
+		try {
+			return entradaService.listarEntradasDTO();		
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
 	
+	// INCLUIR ENTRADA DTO API
+	@CrossOrigin
+	@PostMapping("/dto")
+	public Entrada incluirEntradaDTO(@RequestBody EntradaDTO entrada) {
+		try {
+			return entradaService.incluirEntradaDTO(entrada);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
 }
