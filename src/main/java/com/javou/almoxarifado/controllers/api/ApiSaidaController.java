@@ -12,33 +12,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.javou.almoxarifado.dto.EntradaDTO;
-import com.javou.almoxarifado.dto.EntradaProdutoDTO;
-import com.javou.almoxarifado.models.Entrada;
-import com.javou.almoxarifado.services.EntradaService;
+import com.javou.almoxarifado.dto.SaidaDTO;
+import com.javou.almoxarifado.dto.SaidaProdutoDTO;
+import com.javou.almoxarifado.models.Saida;
+import com.javou.almoxarifado.services.SaidaService;
 
 @RestController
-@RequestMapping("/api/entradas")
-public class ApiEntradaController {
+@RequestMapping("/api/saidas")
+public class ApiSaidaController {
 
 
-	private EntradaService entradaService;
+	private SaidaService saidaService;
 
-	public ApiEntradaController(EntradaService entradaService) {
-		this.entradaService = entradaService;
+	public ApiSaidaController(SaidaService saidaService) {
+		this.saidaService = saidaService;
 	}
 	
 	@CrossOrigin
 	@GetMapping("/")
-	public List<Entrada> listarEntradas() {
-		return entradaService.listarEntradas();
+	public List<Saida> listarSaidas() {
+		return saidaService.listarSaidas();
 	}
 	
 	@CrossOrigin
 	@PostMapping("/")
-	public ResponseEntity<Object> incluirEntrada(@RequestBody Entrada entrada) {
+	public ResponseEntity<Object> incluirSaida(@RequestBody Saida saida) {
 		try {
-			return new ResponseEntity<Object>(entradaService.incluirEntrada(entrada), HttpStatus.CREATED);
+			return new ResponseEntity<Object>(saidaService.incluirSaida(saida), HttpStatus.CREATED);
 		} catch (Exception e) {
 			return ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.toString());
 		}
@@ -47,9 +47,9 @@ public class ApiEntradaController {
 	// LISTAR ENTRADAS DTO API
 	@CrossOrigin
 	@GetMapping("/dto")
-	public List<EntradaProdutoDTO> listarEntradasDTO() {
+	public List<SaidaProdutoDTO> listarSaidasDTO() {
 		try {
-			return entradaService.listarEntradasDTO();		
+			return saidaService.listarSaidasDTO();		
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -58,9 +58,9 @@ public class ApiEntradaController {
 	// INCLUIR ENTRADA DTO API
 	@CrossOrigin
 	@PostMapping("/dto")
-	public Entrada incluirEntradaDTO(@RequestBody EntradaDTO entrada) {
+	public Saida incluirSaidaDTO(@RequestBody SaidaDTO saida) {
 		try {
-			return entradaService.incluirEntradaDTO(entrada);
+			return saidaService.incluirSaidaDTO(saida);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

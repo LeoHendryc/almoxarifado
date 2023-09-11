@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import com.javou.almoxarifado.dto.EntradaDTO;
 import com.javou.almoxarifado.dto.EntradaProdutoDTO;
-import com.javou.almoxarifado.dto.ProdutoUnidadeDTO;
 import com.javou.almoxarifado.models.Entrada;
 import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.repository.EntradaRepository;
