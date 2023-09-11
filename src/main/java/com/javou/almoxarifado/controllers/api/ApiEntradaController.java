@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.javou.almoxarifado.dto.EntradaDTO;
 import com.javou.almoxarifado.dto.EntradaProdutoDTO;
-import com.javou.almoxarifado.dto.ProdutoUnidadeDTO;
 import com.javou.almoxarifado.models.Entrada;
 import com.javou.almoxarifado.services.EntradaService;
 

@@ -8,6 +8,7 @@ import javax.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.javou.almoxarifado.dto.EstoqueDTO;
 import com.javou.almoxarifado.dto.ProdutoUnidadeDTO;
 import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.models.Unidade;
@@ -47,14 +48,7 @@ public class ProdutoService {
 		return produto;		
 	}
 	
-
-
 	
-// ALTERAR
-//	public Produto alterar(Produto produto, String id) {
-//		produto.setId(id);
-//		return produtoRepository.save(produto);
-//	}
 	
 	
 //	REMOVER
@@ -74,20 +68,9 @@ public class ProdutoService {
 		return produtoRepository.getProdutoUnidadeDTO();
 	}
 	
-	
-	
-//	Esse metodo seria se utilizasse MAP ao inves de DTO?
-//	public List<ProdutoUnidadeDTO> listarProdutoUnidadeDTO() {
-//		List<ProdutoUnidadeDTO> produtosDTO = new ArrayList<ProdutoUnidadeDTO>();
-//		
-//		produtoRepository.findAll().forEach(p -> produtosDTO.add(
-//				new ProdutoUnidadeDTO(p.getId(), p.getNome(), p.getNome())));
-//		
-//		return produtosDTO;
-//	}
-	
-	
-	
+	public List<EstoqueDTO> listarEstoque(){
+		return produtoRepository.getEstoque();
+	}
 	
 	
 }

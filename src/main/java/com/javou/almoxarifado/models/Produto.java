@@ -1,5 +1,8 @@
 package com.javou.almoxarifado.models;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -8,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -30,6 +34,13 @@ public class Produto {
 	@JoinColumn(name = "unidadeId")
 	private Unidade unidade;
 	
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "produto")
+	private List<Entrada> entradas;
+
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "produto")
+	private List<Saida> saidas;
 	
 	
 // Getters e Setters
@@ -57,11 +68,20 @@ public class Produto {
 		this.unidade = unidade;
 	}
 
-	
-	
-	
-	
+	public List<Entrada> getEntradas() {
+		return entradas;
+	}
 
-	
+	public void setEntradas(List<Entrada> entradas) {
+		this.entradas = entradas;
+	}
+
+	public List<Saida> getSaidas() {
+		return saidas;
+	}
+
+	public void setSaidas(List<Saida> saidas) {
+		this.saidas = saidas;
+	}	
 
 }

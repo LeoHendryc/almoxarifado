@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.javou.almoxarifado.dto.EstoqueDTO;
 import com.javou.almoxarifado.dto.ProdutoUnidadeDTO;
 import com.javou.almoxarifado.models.Produto;
 import com.javou.almoxarifado.repository.ProdutoRepository;
@@ -74,7 +75,15 @@ public class ApiProdutoController {
 		return produtoService.remover(id);
 	}
 	
-	
+//	LISTAR ESTOQUE (PRODUTOS E SUAS QUANTIDADES NO ALMOXARIFADO)
+	@GetMapping("/estoque")
+	public List<EstoqueDTO> listarEstoque() {
+		try {
+			return produtoService.listarEstoque();		
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
 	
 	
 	
